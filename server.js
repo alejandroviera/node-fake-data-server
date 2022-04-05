@@ -44,6 +44,27 @@ app.get('/events', verifyToken, (req, res) => {
   })
 })
 
+app.get('/events/:id', verifyToken, (req, res) => {
+  jwt.verify(req.token, my_secret_key, (err) => {
+    if (err) {
+      res.sendStatus(401)
+    } else {
+      var result = null
+      if (req.params.id !== undefined) {
+        var all = events.filter((obj) => {
+          return obj.id == req.params.id
+        })
+        if (all.length > 0) {
+          result = all[0]
+        }
+      }
+      res.json({
+        ...result,
+      })
+    }
+  })
+})
+
 app.post('/register', (req, res) => {
   if (req.body) {
     const user = {
