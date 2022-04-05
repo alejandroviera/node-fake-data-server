@@ -65,6 +65,25 @@ app.get('/events/:id', verifyToken, (req, res) => {
   })
 })
 
+app.post('/events', verifyToken, (req, res) => {
+  jwt.verify(req.token, my_secret_key, (err) => {
+    if (err) {
+      res.sendStatus(401)
+    } else {
+      events.push(req.body)
+      const stringData = JSON.stringify(events, null, 2)
+      fs.writeFile('./db/events.json', stringData, (err) => {
+        if (err) {
+          console.log(err + data)
+          res.status(400).json({ error: err })
+        } else {
+          res.sendStatus(200)
+        }
+      })
+    }
+  })
+})
+
 app.post('/register', (req, res) => {
   if (req.body) {
     const user = {
