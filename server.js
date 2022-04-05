@@ -2,7 +2,10 @@ const express = require('express')
 const fs = require('fs')
 const jwt = require('jsonwebtoken')
 const cors = require('cors')
+const bodyParser = require('body-parser')
 const events = require('./db/events.json')
+
+const my_secret_key = 'the_very_secret_key'
 
 const app = express()
 app.use(
@@ -11,6 +14,7 @@ app.use(
     credentials: true,
   })
 )
+app.use(bodyParser.json())
 
 process.on('uncaughtException', (err) => {
   console.error('There was an uncaught error', err)
@@ -22,15 +26,21 @@ app.get('/', (req, res) => {
   })
 })
 
-app.get('/events', (req, res) => {
-  const limit = req.query._limit ? parseInt(req.query._limit) : 5
-  const page = req.query._page ? parseInt(req.query._page) : 1
+app.get('/events', verifyToken, (req, res) => {
+  jwt.verify(req.token, my_secret_key, (err) => {
+    if (err) {
+      res.sendStatus(401)
+    } else {
+      const limit = req.query._limit ? parseInt(req.query._limit) : 5
+      const page = req.query._page ? parseInt(req.query._page) : 1
 
-  pageEvents = events.slice((page - 1) * limit, page * limit)
+      pageEvents = events.slice((page - 1) * limit, page * limit)
 
-  res.set('X-Total-Count', events.length)
-  res.json({
-    events: pageEvents,
+      res.set('X-Total-Count', events.length)
+      res.json({
+        events: pageEvents,
+      })
+    }
   })
 })
 
@@ -40,22 +50,32 @@ app.post('/register', (req, res) => {
       name: req.body.name,
       email: req.body.email,
       password: req.body.password, // don't forget to encrypt it / hash it
+      id: 'abc123',
     }
 
     const data = JSON.stringify(user, null, 2)
     var dbUser = require('./db/user.json')
+    var errorsToSend = []
     if (dbUser.email === user.email) {
-      res.sendStatus(400)
+      errorsToSend.push('An account with this email already exists.')
+    }
+    if (user.password.length < 10) {
+      errorsToSend.push('Password too short.')
+    }
+
+    if (errorsToSend.length > 0) {
+      res.status(400).json({ errors: errorsToSend })
     } else {
       fs.writeFile('./db/user.json', data, (err) => {
         if (err) {
           console.log(err + data)
         } else {
-          const token = jwt.sign({ user }, 'the_very_secret_key')
+          const token = jwt.sign({ user }, my_secret_key)
           res.json({
             token,
             email: user.email,
             name: user.name,
+            id: user.id,
           })
         }
       })
@@ -73,14 +93,15 @@ app.post('/login', (req, res) => {
     req.body.email === userInfo.email &&
     req.body.password === userInfo.password
   ) {
-    const token = jwt.sign({ userInfo }, 'the_very_secret_key')
+    const token = jwt.sign({ userInfo }, my_secret_key)
     res.json({
       token,
       email: userInfo.email,
       name: userInfo.name,
+      id: userInfo.id,
     })
   } else {
-    res.sendStatus(400)
+    res.status(401).json({ error: 'Invalid login. Please try again.' })
   }
 })
 
