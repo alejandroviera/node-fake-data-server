@@ -1,0 +1,272 @@
+[
+  {
+    "id": 123,
+    "category": "animal welfare",
+    "title": "Cat Adoption Day",
+    "description": "Find your new feline friend at this event.",
+    "location": "Meow Town",
+    "date": "January 28, 2022",
+    "time": "12:00",
+    "petsAllowed": true,
+    "organizer": "Kat Laydee",
+    "extras": {
+      "catering": false,
+      "music": false
+    }
+  },
+  {
+    "id": 456,
+    "category": "food",
+    "title": "Community Gardening",
+    "description": "Join us as we tend to the community edible plants.",
+    "location": "Flora City",
+    "date": "March 14, 2022",
+    "time": "10:00",
+    "petsAllowed": true,
+    "organizer": "Fern Pollin",
+    "extras": {
+      "catering": false,
+      "music": false
+    }
+  },
+  {
+    "id": 789,
+    "category": "sustainability",
+    "title": "Beach Cleanup",
+    "description": "Help pick up trash along the shore.",
+    "location": "Playa Del Carmen",
+    "date": "July 22, 2022",
+    "time": "11:00",
+    "petsAllowed": false,
+    "organizer": "Carey Wales",
+    "extras": {
+      "catering": false,
+      "music": false
+    }
+  },
+  {
+    "id": 1001,
+    "category": "animal welfare",
+    "title": "Dog Adoption Day",
+    "description": "Find your new canine friend at this event.",
+    "location": "Woof Town",
+    "date": "August 28, 2022",
+    "time": "12:00",
+    "petsAllowed": true,
+    "organizer": "Dawg Dahd",
+    "extras": {
+      "catering": false,
+      "music": false
+    }
+  },
+  {
+    "id": 1002,
+    "category": "food",
+    "title": "Canned Food Drive",
+    "description": "Bring your canned food to donate to those in need.",
+    "location": "Tin City",
+    "date": "September 14, 2022",
+    "time": "3:00",
+    "petsAllowed": true,
+    "organizer": "Kahn Opiner",
+    "extras": {
+      "catering": false,
+      "music": false
+    }
+  },
+  {
+    "id": 1003,
+    "category": "sustainability",
+    "title": "Highway Cleanup",
+    "description": "Help pick up trash along the highway.",
+    "location": "Highway 50",
+    "date": "July 22, 2022",
+    "time": "11:00",
+    "petsAllowed": false,
+    "organizer": "Brody Kill"
+  },
+  {
+    "category": "",
+    "title": "asdfasdf",
+    "description": "asdfpoi",
+    "location": "adsfoijasdf",
+    "date": "09900",
+    "time": "0909",
+    "id": "626e5bee-0c30-4e1a-bfa9-1b533943e099",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "animal welfare",
+    "title": "asdfjoiasdf",
+    "description": "asdfoi",
+    "location": "asdfoi",
+    "date": "sdf",
+    "time": "090990",
+    "id": "f380ade9-d342-4043-87bd-b0460786df61",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "animal welfare",
+    "title": "event1",
+    "description": "asdf",
+    "location": "asdfoi",
+    "date": "90",
+    "time": "89",
+    "id": "3690c181-4e41-477d-a2cd-4b072da12a05",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "animal welfare",
+    "title": "event2",
+    "description": "aofi",
+    "location": "009",
+    "date": "|",
+    "time": "89",
+    "id": "6782fdfb-a706-4c82-ac4d-83051a3c6343",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "housing",
+    "title": "event3",
+    "description": "asdf",
+    "location": "asdf",
+    "date": "asdf",
+    "time": "sdf",
+    "id": "b22951df-8fb7-4a30-b1e3-bf2e5430d503",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "housing",
+    "title": "event4",
+    "description": "asfd",
+    "location": "asdf",
+    "date": "asdf",
+    "time": "fsd",
+    "id": "8b97973b-38e1-4c1c-bff8-11e5125e4e81",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "housing",
+    "title": "event5",
+    "description": "asdf",
+    "location": "asedf",
+    "date": "sdf",
+    "time": "sadf",
+    "id": "962fa1d3-3cd0-415f-a11b-b116722a73c6",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "education",
+    "title": "event6",
+    "description": "fasdf",
+    "location": "asdf",
+    "date": "asdf",
+    "time": "sdf",
+    "id": "7f61ca58-32eb-4a60-a179-0692b120332e",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "nature",
+    "title": "event7",
+    "description": "afsdf",
+    "location": "asdf",
+    "date": "sdf",
+    "time": "sdf",
+    "id": "e58ea9e3-3d85-401f-b53c-a6166d2f8ee6",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "food",
+    "title": "event8",
+    "description": "asdf",
+    "location": "asdf",
+    "date": "sdf",
+    "time": "sdf",
+    "id": "bce4ecb6-80ac-448d-b866-170a61463582",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "housing",
+    "title": "event9",
+    "description": "asdf",
+    "location": "asdf",
+    "date": "asdaf",
+    "time": "asdf",
+    "id": "8016ecfe-1f52-4d67-b2e8-7c3d67d0c44a",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "food",
+    "title": "event10",
+    "description": "asdf",
+    "location": "fasdd",
+    "date": "asdf",
+    "time": "fasdfd",
+    "id": "438d9ced-f608-4c92-996d-5a2adab665c0",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "education",
+    "title": "newMap",
+    "description": "asdf",
+    "location": "sf",
+    "date": "asedf",
+    "time": "asedf",
+    "id": "c5701d12-c83e-4751-ab89-b5de2f61dcb1",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "animal welfare",
+    "title": "usingModules",
+    "description": "asdf",
+    "location": "asdf",
+    "date": "asdf",
+    "time": "sdf",
+    "id": "9e865aaa-413a-48d4-973e-00f99bf83d57",
+    "organizer": {
+      "userInfo": {
+        "id": "abc123",
+        "name": "Alejandro Viera"
+      }
+    }
+  },
+  {
+    "category": "education",
+    "title": "New Eventasa",
+    "description": "asdfasd",
+    "location": "asdf",
+    "petsAllowed": false,
+    "extras": {
+      "catering": true,
+      "music": true
+    },
+    "id": "c275b015-830c-4f18-8af2-fe3845ba38d2",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "food",
+    "title": "New Event",
+    "description": "asdf",
+    "location": "asdf",
+    "petsAllowed": true,
+    "extras": {
+      "catering": true,
+      "music": true
+    },
+    "id": "dc4e3da9-9b02-44bc-b547-4a40b1693750",
+    "organizer": "Alejandro Viera"
+  },
+  {
+    "category": "housing",
+    "title": "New Event3",
+    "description": "asdf",
+    "location": "aasdf",
+    "petsAllowed": true,
+    "extras": {
+      "catering": true,
+      "music": true
+    },
+    "id": "c684cef6-20ac-4b70-aaf3-18bf7ff501c5",
+    "organizer": "Alejandro Viera"
+  }
+]
